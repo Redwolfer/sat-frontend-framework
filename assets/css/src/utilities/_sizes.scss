@@ -1,0 +1,31 @@
+//
+//  Sizes
+//
+
+/* Width sizes */
+@each $name, $value in $sizes {
+    .w-#{$name} {
+        width: $value !important;
+    }
+}
+
+/* Max width sizes */
+@each $name, $value in $sizes {
+    .mw-#{$name} {
+        max-width: $value !important;
+    }
+}
+
+/* Height sizes */
+@each $name, $value in $sizes {
+    .h-#{$name} {
+        height: $value !important;
+    }
+}
+
+/* Max height sizes */
+@each $name, $value in $sizes {
+    .mh-#{$name} {
+        height: $value !important;
+    }
+}

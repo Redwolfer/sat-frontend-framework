@@ -1,0 +1,60 @@
+//
+// 	Tables
+//
+
+/* Table */
+.table {
+	margin: 0;
+	>thead {
+		>tr {
+			>th {
+				border-bottom-width: 1px;
+			}
+		}
+	}
+	>tbody {
+		>tr {
+			>td {
+				border-top-width: 0;
+			}
+		}
+	}
+	&.table-bordered {
+		>thead {
+			>tr {
+				>th {
+					border: 1px solid var(--mcu-gray-200) !important;
+				}
+			}
+		}
+		>tbody {
+			>tr {
+				>td {
+					border: 1px solid var(--mcu-gray-200) !important;
+				}
+			}
+		}
+	}
+	&.table-borderless {
+		>thead {
+			>tr {
+				>th {
+					border: 0 !important;
+				}
+			}
+		}
+		>tbody {
+			>tr {
+				>td {
+					border: 0 !important;
+				}
+			}
+		}
+	}
+}
+
+/* Table responsive */
+.table-responsive {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+}

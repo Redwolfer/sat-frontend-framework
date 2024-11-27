@@ -1,0 +1,86 @@
+//
+// Form controls
+//
+
+/* Form control */
+.form-control {
+    color: var(--mcu-gray-800);
+    border: 1px solid var(--mcu-gray-200);
+    background-color: var(--mcu-white);
+    border-radius: 0.675rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    box-shadow: none;
+
+    //  Solid
+    &.form-control-solid {
+        background-color: var(--mcu-light);
+        border-color: var(--mcu-light);
+        color: var(--mcu-gray-800);
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    //  Transparent
+    &.form-control-transparent {
+        background-color: transparent;
+        border-color: transparent;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        box-shadow: none;
+    }
+
+    //  Flush
+    &.form-control-flush {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: transparent;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    //  Disabled
+    &:disabled {
+        background-color: var(--mcu-gray-200) !important;
+    }
+
+    //  Readonly
+    &:read-only {
+        background-color: var(--mcu-light);
+        border-color: var(--mcu-light-active);
+    }
+
+    &[type="file"] {
+        overflow: hidden;
+        &:not(:disabled) {
+            &:not([readonly]) {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &::file-selector-button {
+        padding: 0.775rem 1rem;
+        margin: -0.775rem -1rem;
+        margin-inline-end: 1rem;
+        color: var(--mcu-gray-700);
+        background-color: var(--mcu-gray-100);
+        pointer-events: none;
+        border-color: inherit;
+        border-style: solid;
+        border-width: 0;
+        border-inline-end-width: 1px;
+        border-radius: 0;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .form-control::file-selector-button {
+            transition: none;
+        }
+    }
+
+    .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+        background-color: shade-color(var(--mcu-gray-100), 5%);
+    }
+
+}

@@ -1,0 +1,10 @@
+//
+//  Justify contents
+//
+
+/* Justify contents */
+@each $name, $value in $justify-contents {
+    .justify-content-#{$name} {
+        justify-content: $value !important;
+    }
+}

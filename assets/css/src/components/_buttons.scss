@@ -1,0 +1,180 @@
+//
+//  Button
+//
+
+/* Buttons */
+.btn {
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-radius: 0.4em;
+    padding: 0.5em 1em;
+    // padding-left: 1em;
+    // padding-right: 1em;
+    font-size: 1em;
+    outline: none !important;
+
+    &:not(.btn-shadow):not(.shadow):not(.shadow-sm):not(.shadow-lg):not(
+            .shadow-xs
+        ) {
+        box-shadow: none;
+    }
+
+    &:not(.btn-outline):not(.btn-dashed):not(.border-hover):not(
+            .border-active
+        ):not(.btn-flush):not(.btn-icon) {
+        border: 0;
+    }
+
+    &.btn-rounded {
+        border-radius: 2em;
+    }
+
+    &.btn-squared {
+        border-radius: 0;
+    }
+
+    &.btn-sm {
+        font-size: 0.9em;
+        line-height: 1.42857143;
+    }
+
+    &.btn-lg {
+        font-size: 1.15em !important;
+        line-height: 1.42857143;
+    }
+
+    //  Theme colors
+    @each $name, $value in $theme-colors {
+        @if $name == "light" {
+            &.btn-default {
+                color: var(--mcu-dark);
+                background-color: var(--mcu-light);
+            }
+            &.btn-default:hover {
+                color: var(--mcu-light);
+                background-color: var(--mcu-dark-active);
+            }
+            &.btn-light {
+                color: var(--mcu-dark);
+                background-color: var(--mcu-light);
+            }
+            &.btn-light:hover {
+                color: var(--mcu-light);
+                background-color: var(--mcu-dark-active);
+            }
+        } @else if $name == "dark" {
+            &.btn-dark {
+                color: var(--mcu-light);
+                background-color: var(--mcu-dark);
+            }
+            &.btn-dark:hover {
+                color: var(--mcu-dark);
+                background-color: var(--mcu-light-active);
+            }
+        } @else {
+            &.btn-#{$name} {
+                color: var(--mcu-light);
+                background-color: var(--mcu-#{$name});
+            }
+            &.btn-#{$name}:hover {
+                color: var(--mcu-light);
+                background-color: var(--mcu-#{$name}-active);
+            }
+        }
+    }
+
+    /* Theme light colors */
+    @each $name, $value in $theme-light-colors {
+        &.btn-#{$name}-subtle {
+            color: var(--mcu-#{$name});
+            background-color: var(--mcu-#{$name}-light);
+        }
+        &.btn-#{$name}-subtle:hover {
+            color: var(--mcu-light);
+            background-color: var(--mcu-#{$name});
+        }
+    }
+}
+
+.btn-link {
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    text-decoration: none !important;
+
+    &.btn-link:focus,
+    &.btn-link:focus-visible,
+    &.btn-link:active {
+        outline: 0 !important;
+        box-shadow: none !important;
+    }
+
+    @each $name, $value in $theme-colors {
+        &.btn-link-#{$name} {
+            color: var(--mcu-#{$name}) !important;
+            &:hover {
+                color: var(--mcu-#{$name}-active) !important;
+            }
+        }
+    }
+}
+
+//  Available button icon theme colors
+$available-btn-icon-colors: (
+    "primary",
+    "secondary",
+    "success",
+    "warning",
+    "danger",
+    "info",
+    "blue",
+    "aqua",
+    "fk",
+    "fkg",
+    "fp",
+    "fhik",
+    "fhbd",
+    "ftrc"
+) !default;
+
+//  Available button icon gray colors
+$available-btn-icon-gray-colors: (
+    "100",
+    "200",
+    "300",
+    "400",
+    "500",
+    "600",
+    "700",
+    "800",
+    "900"
+) !default;
+
+/* Button icon */
+.btn-icon {
+    background-color: transparent;
+    border: 0;
+    padding: 0.125em 0.25em;
+
+    i {
+        font-size: 2em;
+    }
+
+    //  Button icon colors
+    @each $name in $available-btn-icon-colors {
+        &.btn-icon-#{$name} {
+            color: var(--mcu-#{$name});
+            &:hover {
+                color: var(--mcu-#{$name}-active);
+            }
+        }
+    }
+
+    //  Button gray colors
+    @each $name in $available-btn-icon-gray-colors {
+        &.btn-icon-gray-#{$name} {
+            color: var(--mcu-gray-#{$name});
+        }
+    }
+}

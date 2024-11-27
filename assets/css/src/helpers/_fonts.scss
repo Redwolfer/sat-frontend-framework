@@ -1,0 +1,31 @@
+//
+//  Font
+//
+
+/* Font sizes */
+@each $name, $value in $font-sizes {
+    .fs-#{$name} {
+        font-size: $value !important;
+    }
+}
+
+/* Font size multipliers */
+@each $name, $value in $font-size-multipliers {
+    .fs-#{$name} {
+        font-size: $value !important;
+    }
+}
+
+/* Font styles */
+@each $name, $value in $font-styles {
+    .fst-#{$name} {
+        font-style: $value !important;
+    }
+}
+
+/* Font weights */
+@each $name, $value in $font-weights {
+    .fw-#{$name} {
+        font-weight: $value !important;
+    }
+}

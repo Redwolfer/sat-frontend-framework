@@ -1,0 +1,10 @@
+//
+//  Shadows
+//
+
+/* Shadows */
+@each $name, $value in $shadows {
+    .shadow#{$name} {
+        box-shadow: $value;
+    }
+}

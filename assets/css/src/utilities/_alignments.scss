@@ -1,0 +1,31 @@
+//
+//  Alignments
+//
+
+/* Vertical alignments */
+@each $name, $value in $vertical-alignments {
+    .align-#{$name} {
+        vertical-align: $value !important;
+    }
+}
+
+/* Item alignments */
+@each $name, $value in $item-alignments {
+    .align-items-#{$name} {
+        align-items: $value !important;
+    }
+}
+
+/* Content alignments */
+@each $name, $value in $content-alignments {
+    .align-content-#{$name} {
+        align-content: $value !important;
+    }
+}
+
+/* Self alignments */
+@each $name, $value in $self-alignments {
+    .align-self-#{$name} {
+        align-self: $value !important;
+    }
+}

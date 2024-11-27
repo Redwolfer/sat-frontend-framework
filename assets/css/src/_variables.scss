@@ -1,0 +1,559 @@
+//
+// Bootstrap & SAT Variables
+//
+
+// Bootstrap color system
+$white: #ffffff !default;
+$black: #000000 !default;
+
+// Bootstrap grey colors
+$gray-100: #f8f8f8 !default;
+$gray-200: #dfdfdf !default;
+$gray-300: #c5c5c5 !default;
+$gray-400: #acacac !default;
+$gray-500: #929292 !default;
+$gray-600: #797979 !default;
+$gray-700: #5f5f5f !default;
+$gray-800: #464646 !default;
+$gray-900: #2c2c2c !default;
+
+// Primary colors
+$primary: #007BFF !default;
+$primary-active: #0062cc !default;
+$primary-light: #cce5ff !default;
+$primary-dark: #003166 !default;
+
+// Secondary colors
+$secondary: #6c757d !default;
+$secondary-active: #545b62 !default;
+$secondary-light: #f3f4f5 !default;
+$secondary-dark: #25282b !default;
+
+// Light colors
+$light: $gray-100 !default;
+$light-active: $gray-200 !default;
+$light-light: gba($gray-100, 0.75) !default;
+$light-dark: #b3b3b3 !default;
+
+// Success colors
+$success: #28A745 !default;
+$success-active: #1e7e34 !default;
+$success-light: #d8f6df !default;
+$success-dark: #0a2c12 !default;
+
+// Info colors
+$info: #17a2b8 !default;
+$info-active: #117a8b !default;
+$info-light: #d4f5fa !default;
+$info-dark: #062a30 !default;
+
+// Warning colors
+$warning: #ffc107 !default;
+$warning-active: #d39e00 !default;
+$warning-light: #fff4d3 !default;
+$warning-dark: #6d5200 !default;
+
+// Danger colors
+$danger: #dc3545 !default;
+$danger-active: #bd2130 !default;
+$danger-light: #fae3e5 !default;
+$danger-dark: #66121a !default;
+
+// Dark colors
+$dark: $gray-900 !default;
+$dark-active: darken($gray-900, 3%) !default;
+$dark-light: $gray-200 !default;
+$dark-dark: $black !default;
+
+// MCU blue colors
+$blue: #0067ac !default;
+$blue-active: #004879 !default;
+$blue-light: #dff2ff !default;
+$blue-dark: #000b13 !default;
+
+// MCU aqua colors
+$aqua: #00a4e4 !default;
+$aqua-active: #007fb1 !default;
+$aqua-light: #e4f7ff !default;
+$aqua-dark: #00364b !default;
+
+// MCU FK colors
+$fk: #00653b !default;
+$fk-active: #00321d !default;
+$fk-light: #cbffe9 !default;
+$fk-dark: #000 !default;
+
+// MCU FKG colors
+$fkg: #9370b1 !default;
+$fkg-active: #7a549a !default;
+$fkg-light: #f7f4f9 !default;
+$fkg-dark: #463058 !default;
+
+// MCU FP colors
+$fp: #862175 !default;
+$fp-active: #5d1751 !default;
+$fp-light: #f8e1f4 !default;
+$fp-dark: #0b030a !default;
+
+// MCU FHIK colors
+$fhik: #f15a1e !default;
+$fhik-active: #cf440d !default;
+$fhik-light: #fde7de !default;
+$fhik-dark: #6f2507 !default;
+
+// MCU FHBD colors
+$fhbd: #fcaf15 !default;
+$fhbd-active: #db9303 !default;
+$fhbd-light: #fff4de !default;
+$fhbd-dark: #764f02 !default;
+
+// MCU FTRC colors
+$ftrc: #00a3a8 !default;
+$ftrc-active: #007275 !default;
+$ftrc-light: #dbfeff !default;
+$ftrc-dark: #000f0f !default;
+
+// Contextual colors
+$theme-colors: (
+    "light": $light,
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "dark": $dark,
+    "blue": $blue,
+    "aqua": $aqua,
+    "fk": $fk,
+    "fkg": $fkg,
+    "fp": $fp,
+    "fhik": $fhik,
+    "fhbd": $fhbd,
+    "ftrc": $ftrc,
+) !default;
+
+// Contextual active state colors
+$theme-active-colors: (
+    "primary": $primary-active,
+    "secondary": $secondary-active,
+    "light": $light-active,
+    "success": $success-active,
+    "info": $info-active,
+    "warning": $warning-active,
+    "danger": $danger-active,
+    "dark": $dark-active,
+    "blue": $blue-active,
+    "aqua": $aqua-active,
+    "fk": $fk-active,
+    "fkg": $fkg-active,
+    "fp": $fp-active,
+    "fhik": $fhik-active,
+    "fhbd": $fhbd-active,
+    "ftrc": $ftrc-active,
+) !default;
+
+// Contextual light state colors
+$theme-light-colors: (
+    "primary": $primary-light,
+    "secondary": $secondary-light,
+    "success": $success-light,
+    "info": $info-light,
+    "warning": $warning-light,
+    "danger": $danger-light,
+    "dark": $dark-light,
+    "blue": $blue-light,
+    "aqua": $aqua-light,
+    "fk": $fk-light,
+    "fkg": $fkg-light,
+    "fp": $fp-light,
+    "fhik": $fhik-light,
+    "fhbd": $fhbd-light,
+    "ftrc": $ftrc-light,
+) !default;
+
+// Contextual dark state colors
+$theme-dark-colors: (
+    "primary": $primary-dark,
+    "secondary": $secondary-dark,
+    "success": $success-dark,
+    "info": $info-dark,
+    "warning": $warning-dark,
+    "danger": $danger-dark,
+    "dark": $dark-dark,
+    "blue": $blue-dark,
+    "aqua": $aqua-dark,
+    "fk": $fk-dark,
+    "fkg": $fkg-dark,
+    "fp": $fp-dark,
+    "fhik": $fhik-dark,
+    "fhbd": $fhbd-dark,
+    "ftrc": $ftrc-dark,
+) !default;
+
+// Bootstrap gray colors map
+$grays: (
+	"100": $gray-100,
+	"200": $gray-200,
+	"300": $gray-300,
+	"400": $gray-400,
+	"500": $gray-500,
+	"600": $gray-600,
+	"700": $gray-700,
+	"800": $gray-800,
+	"900": $gray-900
+) !default;
+
+//  Grid breakpoints
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px
+) !default;
+
+//  Border widths
+$border-widths: (
+    "1": 1px,
+    "2": 2px,
+    "3": 3px,
+    "4": 4px,
+    "5": 5px,
+) !default;
+
+//  Border styles
+$border-styles: (
+    "dashed": dashed,
+    "dotted": dotted,
+) !default;
+
+//  Border radiuses
+$border-radiuses: (
+    "": .5em,
+    "-xs": .125em,
+    "-sm": .25em,
+    "-lg": .75em,
+    "-xl": .875em,
+) !default;
+
+//  Text aligns
+$text-aligns: (
+    "left": left,
+    "right": right,
+    "center": center,
+    "justify": justify
+) !default;
+
+//  Text decorations
+$text-decorations: (
+    "none": none,
+    "underline": underline,
+    "line-through": line-through,
+) !default;
+
+//  Text transforms
+$text-transforms: (
+    "lowercase": lowercase,
+    "uppercase": uppercase,
+    "capitalize": capitalize,
+) !default;
+
+//  Spacings
+$spacings: (
+    "0": 0,
+    "1": .25em,
+    "2": .5em,
+    "3": .75em,
+    "4": 1em,
+    "5": 1.25em,
+    "6": 1.5em,
+    "7": 1.75em,
+    "8": 2em,
+    "9": 2.25em,
+    "10": 2.5em,
+    "11": 2.75em,
+    "12": 3em,
+    "13": 3.25em,
+    "14": 3.5em,
+    "15": 3.75em,
+    "16": 4em,
+    "17": 4.25em,
+    "18": 4.5em,
+    "19": 4.75em,
+    "20": 5em
+) !default;
+
+//  Sizes
+$sizes: (
+	"unset": unset,
+	"25": 25%,
+	"50": 50%,
+	"75": 75%,
+	"100": 100%,
+	"auto": auto,
+	"1px": 1px,
+	"2px": 2px,
+	"3px": 3px,
+	"4px": 4px,
+	"5px": 5px,
+	"6px": 6px,
+	"7px": 7px,
+	"8px": 8px,
+	"9px": 9px,
+	"10px": 10px,
+	"15px": 15px,
+	"20px": 20px,
+	"25px": 25px,
+	"30px": 30px,
+	"35px": 35px,
+	"40px": 40px,
+	"45px": 45px,
+	"50px": 50px,
+	"55px": 55px,
+	"60px": 60px,
+	"65px": 65px,
+	"70px": 70px,
+	"75px": 75px,
+	"80px": 80px,
+	"85px": 85px,
+	"90px": 90px,
+	"95px": 95px,
+	"100px": 100px,
+	"125px": 125px,
+	"150px": 150px,
+	"175px": 175px,
+	"200px": 200px,
+	"225px": 225px,
+	"250px": 250px,
+	"275px": 275px,
+	"300px": 300px,
+	"325px": 325px,
+	"350px": 350px,
+	"375px": 375px,
+	"400px": 400px,
+	"425px": 425px,
+	"450px": 450px,
+	"475px": 475px,
+	"500px": 500px,
+	"550px": 550px,
+	"600px": 600px,
+	"650px": 650px,
+	"700px": 700px,
+	"750px": 750px,
+	"800px": 800px,
+	"850px": 850px,
+	"900px": 900px,
+	"950px": 950px,
+	"1000px": 1000px
+) !default;
+
+//  Hover transform
+$hover-transform: transform 0.3s ease !default;
+
+//  Hover elevations
+$hover-elevations: (
+    "up": -7.5%,
+    "down": 7.5%,
+) !default;
+
+//  Hover rotations
+$hover-rotations: (
+    "start": 4deg,
+    "end": -4deg,
+) !default;
+
+//  Hover scales
+$hover-scales: (
+    "": 1.1,
+    "-xs":  .8,
+    "-sm":  .9,
+    "-lg":  1.2,
+    "-xl":  1.3,
+) !default;
+
+//  Font sizes
+$font-sizes: (
+    "1": 2.5em,
+    "2": 2.08em,
+    "3": 1.73em,
+    "4": 1.4em,
+    "5": 1.2em,
+    "6": 1em,
+    "7": .83em,
+    "8": .69em,
+    "9": .57em,
+    "10": .48em,
+) !default;
+
+//  Font size multipliers
+$font-size-multipliers: (
+    "2x": 2em,
+    "3x": 3em,
+    "4x": 4em,
+    "5x": 5em,
+    "6x": 6em,
+    "7x": 7em,
+    "8x": 8em,
+) !default;
+
+//  Font styles
+$font-styles: (
+    "normal": normal,
+    "italic": italic,
+) !default;
+
+//  Font weights
+$font-weights: (
+    "lighter": lighter,
+    "light": 300,
+    "normal": 400,
+    "medium": 500,
+    "semibold": 500,
+    "bold": 600,
+    "bolder": 700,
+) !default;
+
+//  Flexes
+$flexes: (
+  "root": 1,
+  "column-auto": none,
+  "column-fluid": 1 0 auto,
+  "row-auto": 0 0 auto,
+  "row-fluid": 1 auto,
+) !default;
+
+// Flex alignments
+$flex-alignments: (
+  "center": center,
+  "start": start,
+  "end": flex-end,
+  "stack": space-between,
+) !default;
+
+//  Flex directions
+$flex-directions: (
+  "row": row,
+  "column": column,
+  "row-reverse": row-reverse,
+  "column-reverse": column-reverse,
+) !default;
+
+//  Flex grows
+$flex-grows: (
+  "0": 0,
+  "1": 1,
+) !default;
+
+//  Flex shrinks
+$flex-shrinks: (
+  "0": 0,
+  "1": 1,
+) !default;
+
+//  Flex wraps
+$flex-wraps: (
+  "wrap": wrap,
+  "nowrap": nowrap,
+  "wrap-reverse": wrap-reverse,
+) !default;
+
+//  Shadows
+$shadows: (
+    "": 0 0.5rem 1.5rem 0.5rem rgba(0, 0, 0, 0.075),
+    "-xs": 0 0.1rem 0.75rem 0.25rem rgba(0, 0, 0, 0.05),
+    "-sm": 0 0.1rem 1rem 0.25rem rgba(0, 0, 0, 0.05),
+    "-lg": 0 1rem 2rem 1rem rgba(0, 0, 0, 0.1),
+    "-xl": 0 1rem 2.25rem 1rem rgba(0, 0, 0, 0.1),
+) !default;
+
+//  Displays
+$displays: (
+    "none": none,
+    "block": block,
+    "inline": inline,
+    "flex": flex
+) !default;
+
+//  Justify content
+$justify-contents: (
+    "start": start,
+    "center": center,
+    "end": end,
+    "left": left,
+    "right": right,
+    "around": space-around,
+    "between": space-between,
+    "evenly": space-evenly
+);
+
+//  Positions
+$positions: (
+    "relative": relative,
+    "absolute": absolute,
+) !default;
+
+//  Vertical alignments
+$vertical-alignments: (
+    "baseline": baseline,
+    "top": top,
+    "middle": middle,
+    "bottom": bottom,
+    "text-top": text-top,
+    "text-bottom": text-bottom,
+) !default;
+
+//  Item alignments
+$item-alignments: (
+    "start": flex-start,
+    "end": flex-end,
+    "center": center,
+    "baseline": baseline,
+    "stretch": stretch,
+) !default;
+
+//  Content alignments
+$content-alignments: (
+    "start": flex-start,
+    "end": flex-end,
+    "center": center,
+    "between": space-between,
+    "around": space-around,
+    "stretch": stretch,
+) !default;
+
+//  Self alignments
+$self-alignments: (
+    "auto": auto,
+    "start": flex-start,
+    "end": flex-end,
+    "center": center,
+    "baseline": baseline,
+    "stretch": stretch,
+) !default;
+
+//  Symbol sizes
+$symbol-sizes: (
+    "20px": 20px,
+    "25px": 25px,
+    "30px": 30px,
+    "35px": 35px,
+    "40px": 40px,
+    "45px": 45px,
+    "50px": 50px,
+    "55px": 55px,
+    "60px": 60px,
+    "65px": 65px,
+    "70px": 70px,
+    "75px": 75px,
+    "80px": 80px,
+    "85px": 85px,
+    "90px": 90px,
+    "95px": 95px,
+    "100px": 100px,
+    "125px": 125px,
+    "150px": 150px,
+    "175px": 175px,
+    "200px": 200px,
+) !default;

@@ -1,0 +1,287 @@
+//
+//  Borders
+//
+
+.border {
+    //  Border color
+    @each $name, $value in $theme-colors {
+        &.border-#{$name} {
+            border-color: var(--mcu-#{$name}) !important;
+        }
+    }
+
+    //  Border left colors
+    @each $name, $value in $theme-colors {
+        &.border-left-#{$name} {
+            border-left-color: var(--mcu-#{$name}) !important;
+        }
+    }
+
+    //  Border right colors
+    @each $name, $value in $theme-colors {
+        &.border-right-#{$name} {
+            border-right-color: var(--mcu-#{$name}) !important;
+        }
+    }
+
+    //  Border top colors
+    @each $name, $value in $theme-colors {
+        &.border-top-#{$name} {
+            border-top-color: var(--mcu-#{$name}) !important;
+        }
+    }
+
+    //  Border bottom colors
+    @each $name, $value in $theme-colors {
+        &.border-bottom-#{$name} {
+            border-bottom-color: var(--mcu-#{$name}) !important;
+        }
+    }
+
+    //  Border horizontal colors
+    @each $name, $value in $theme-colors {
+        &.border-x-#{$name} {
+            border-left-color: var(--mcu-#{$name}) !important;
+            border-right-color: var(--mcu-#{$name}) !important;
+        }
+    }
+
+    // Border vertical colors
+    @each $name, $value in $theme-colors {
+        &.border-y-#{$name} {
+            border-top-color: var(--mcu-#{$name}) !important;
+            border-bottom-color: var(--mcu-#{$name}) !important;
+        }
+    }
+
+    // Border subtle colors
+    @each $name, $value in $theme-light-colors {
+        &.border-#{$name}-subtle {
+            border-color: var(--mcu-#{$name}-light) !important;
+        }
+    }
+
+    // Border left subtle colors
+    @each $name, $value in $theme-light-colors {
+        &.border-left-#{$name}-subtle {
+            border-left-color: var(--mcu-#{$name}-light) !important;
+        }
+    }
+
+    // Border right subtle colors
+    @each $name, $value in $theme-light-colors {
+        &.border-right-#{$name}-subtle {
+            border-right-color: var(--mcu-#{$name}-light) !important;
+        }
+    }
+
+    // Border top subtle colors
+    @each $name, $value in $theme-light-colors {
+        &.border-top-#{$name}-subtle {
+            border-top-color: var(--mcu-#{$name}-light) !important;
+        }
+    }
+
+    // Border bottom subtle colors
+    @each $name, $value in $theme-light-colors {
+        &.border-bottom-#{$name}-subtle {
+            border-bottom-color: var(--mcu-#{$name}-light) !important;
+        }
+    }
+
+    // Border horizontal subtle colors
+    @each $name, $value in $theme-light-colors {
+        &.border-x-#{$name}-subtle {
+            border-left-color: var(--mcu-#{$name}-light) !important;
+            border-right-color: var(--mcu-#{$name}-light) !important;
+        }
+    }
+
+    // Border vertical subtle colors
+    @each $name, $value in $theme-light-colors {
+        &.border-y-#{$name}-subtle {
+            border-top-color: var(--mcu-#{$name}-light) !important;
+            border-bottom-color: var(--mcu-#{$name}-light) !important;
+        }
+    }
+
+    // Border gray colors
+    @each $name, $value in $grays {
+        &.border-gray-#{$name} {
+            border-color: var(--mcu-gray-#{$name}) !important;
+        }
+    }
+
+    // Border left gray colors
+    @each $name, $value in $grays {
+        &.border-left-gray-#{$name} {
+            border-left-color: var(--mcu-gray-#{$name}) !important;
+        }
+    }
+
+    // Border right gray colors
+    @each $name, $value in $grays {
+        &.border-right-gray-#{$name} {
+            border-right-color: var(--mcu-gray-#{$name}) !important;
+        }
+    }
+
+    // Border top gray colors
+    @each $name, $value in $grays {
+        &.border-top-gray-#{$name} {
+            border-top-color: var(--mcu-gray-#{$name}) !important;
+        }
+    }
+
+    // Border bottom gray colors
+    @each $name, $value in $grays {
+        &.border-bottom-gray-#{$name} {
+            border-bottom-color: var(--mcu-gray-#{$name}) !important;
+        }
+    }
+
+    // Border horizontal gray colors
+    @each $name, $value in $grays {
+        &.border-x-gray-#{$name} {
+            border-left-color: var(--mcu-gray-#{$name}) !important;
+            border-right-color: var(--mcu-gray-#{$name}) !important;
+        }
+    }
+
+    // Border vertical gray colors
+    @each $name, $value in $grays {
+        &.border-y-gray-#{$name} {
+            border-top-color: var(--mcu-gray-#{$name}) !important;
+            border-bottom-color: var(--mcu-gray-#{$name}) !important;
+        }
+    }
+
+    // Border widths
+    @each $name, $value in $border-widths {
+        &.border-#{$name} {
+            border-width: $value !important;
+        }
+    }
+
+    // Border left widths
+    @each $name, $value in $border-widths {
+        &.border-left-#{$name} {
+            border-left-width: $value !important;
+        }
+    }
+
+    // Border right widths
+    @each $name, $value in $border-widths {
+        &.border-right-#{$name} {
+            border-right-width: $value !important;
+        }
+    }
+
+    // Border top widths
+    @each $name, $value in $border-widths {
+        &.border-top-#{$name} {
+            border-top-width: $value !important;
+        }
+    }
+
+    // Border bottom widths
+    @each $name, $value in $border-widths {
+        &.border-bottom-#{$name} {
+            border-bottom-width: $value !important;
+        }
+    }
+
+    // Border horizontal widths
+    @each $name, $value in $border-widths {
+        &.border-x-#{$name} {
+            border-left-width: $value !important;
+            border-right-width: $value !important;
+        }
+    }
+
+    // Border vertical widths
+    @each $name, $value in $border-widths {
+        &.border-y-#{$name} {
+            border-top-width: $value !important;
+            border-bottom-width: $value !important;
+        }
+    }
+
+    // Border styles
+    @each $name, $value in $border-styles {
+        &.border-#{$name} {
+            border-style: $value !important;
+        }
+    }
+
+    // Border left styles
+    @each $name, $value in $border-styles {
+        &.border-left-#{$name} {
+            border-left-style: $value !important;
+        }
+    }
+
+    // Border right styles
+    @each $name, $value in $border-styles {
+        &.border-right-#{$name} {
+            border-right-style: $value !important;
+        }
+    }
+
+    // Border top styles
+    @each $name, $value in $border-styles {
+        &.border-top-#{$name} {
+            border-top-style: $value !important;
+        }
+    }
+
+    // Border bottom styles
+    @each $name, $value in $border-styles {
+        &.border-bottom-#{$name} {
+            border-bottom-style: $value !important;
+        }
+    }
+
+    // Border horizontal styles
+    @each $name, $value in $border-styles {
+        &.border-x-#{$name} {
+            border-left-style: $value !important;
+            border-right-style: $value !important;
+        }
+    }
+
+    // Border vertical styles
+    @each $name, $value in $border-styles {
+        &.border-y-#{$name} {
+            border-top-style: $value !important;
+            border-bottom-style: $value !important;
+        }
+    }
+
+    // Border radiuses
+    @each $name, $value in $border-radiuses {
+        &.border-radius#{$name} {
+            border-radius: $value !important;
+        }
+    }
+
+    // Rounded pill
+    &.rounded-pill {
+        border-radius: 1em !important;
+    }
+
+    // Rounded
+    &.rounded {
+        border-radius: .5em !important;
+    }
+
+    // Squared
+    &.squared {
+        border-radius: 0 !important;
+    }
+
+    // Circle
+    &.circle {
+        border-radius: 50% !important;
+    }
+}

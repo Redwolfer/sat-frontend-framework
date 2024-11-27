@@ -1,0 +1,32 @@
+:root {
+
+    /* BW colors */
+    --mcu-white: #{$white};
+    --mcu-black: #{$black};
+
+    /* Theme colors */
+    @each $name, $value in $theme-colors {
+        --mcu-#{$name}: #{$value};
+    }
+
+    /* Theme active colors */
+    @each $name, $value in $theme-active-colors {
+        --mcu-#{$name}-active: #{$value};
+    }
+
+    /* Theme light colors */
+    @each $name, $value in $theme-light-colors {
+        --mcu-#{$name}-light: #{$value};
+    }
+
+    /* Theme dark colors */
+    @each $name, $value in $theme-dark-colors {
+        --mcu-#{$name}-dark: #{$value};
+    }
+
+    /* Theme gray colors */
+    @each $name, $value in $grays {
+        --mcu-gray-#{$name}: #{$value};
+    }
+
+}

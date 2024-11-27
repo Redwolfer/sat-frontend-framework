@@ -1,0 +1,142 @@
+//
+//  Form checks
+//
+
+$form-check-colors: primary, secondary, success, warning, danger, info;
+
+/* Form check */
+.form-check {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 2.25rem;
+
+    //  Colors
+    @each $name in $form-check-colors {
+        &.form-check-#{$name} {
+            .form-check-input {
+                &:checked {
+                    background-color: var(--mcu-#{$name});
+                }
+            }
+        }
+    }
+
+    //  Inline
+    &.form-check-inline {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    //  Input
+    .form-check-input {
+        float: left;
+        margin-left: -2.25rem;
+        width: 1.85rem;
+        height: 1.85rem;
+        vertical-align: top;
+        background-color: transparent;
+        background-image: var(--bs-form-check-bg-image);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        border: 1px solid var(--mcu-gray-300);
+        appearance: none;
+
+        //  Checkbox
+        &[type=checkbox] {
+            border-radius: 0.45em;
+            margin-top: 0;
+        }
+
+        //  Radio
+        &[type=radio] {
+            border-radius: 50%;
+            margin-top: 0;
+        }
+
+        //  Active state
+        &:active {
+            filter: brightness(90%);
+        }
+
+        //  Focus state
+        &:focus {
+            border-color: var(--mcu-gray-400);
+            outline: 0;
+            outline-width: 0;
+            box-shadow: none;
+        }
+
+        //  Checked state
+        &:checked {
+            background-color: var(--mcu-primary);
+            border: none;
+
+            //  Checkbox
+            &[type=checkbox] {
+                --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 11' width='13' height='11' fill='none'%3e%3cpath d='M11.0426 1.02893C11.3258 0.695792 11.8254 0.655283 12.1585 0.938451C12.4917 1.22162 12.5322 1.72124 12.249 2.05437L5.51985 9.97104C5.23224 10.3094 4.72261 10.3451 4.3907 10.05L0.828197 6.88335C0.50141 6.59288 0.471975 6.09249 0.762452 5.7657C1.05293 5.43891 1.55332 5.40948 1.88011 5.69995L4.83765 8.32889L11.0426 1.02893Z' fill='%23ffffff'/%3e%3c/svg%3e");
+            }
+
+            //  Radio
+            &[type=radio] {
+                --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23ffffff'/%3e%3c/svg%3e");
+            }
+
+        }
+
+        //  Disabled
+        &:disabled {
+            pointer-events: none;
+            filter: none;
+            opacity: 0.5;
+        }
+
+    }
+
+    //  Label
+    .form-check-label {
+        font-weight: normal;
+        color: var(--mcu-gray-800);
+        margin-bottom: 0;
+        margin-left: .5em;
+    }
+
+    &:not(.form-switch) {
+        .form-check-input {
+            &[type=checkbox] {
+                background-size: 60% 60%;
+            }
+        }
+    }
+
+    &.form-switch {
+        .form-check-input {
+            --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+            width: 3.25rem;
+            margin-left: -3.75rem;
+            background-image: var(--bs-form-switch-bg);
+            background-position: left center;
+            border-radius: 2.25em;
+            transition: background-position 0.15s ease-in-out;
+            &:focus {
+                --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+            }
+            &:checked {
+                background-position: right center;
+                --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e");
+            }
+        }
+    }
+
+}
+
+.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
+    cursor: default;
+    opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .form-switch .form-check-input {
+        transition: none;
+    }
+}

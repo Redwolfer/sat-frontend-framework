@@ -1,0 +1,50 @@
+@import 'mixins/svg-bg-icon';
+@import 'variables';
+@import 'root';
+
+//  HTML
+@import 'html';
+
+//  Components - Forms
+@import 'components/forms/form-checks';
+@import 'components/forms/form-controls';
+@import 'components/forms/form-selects';
+@import 'components/forms/forms';
+
+//  Components
+@import 'components/alerts';
+@import 'components/bullets';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/modals';
+@import 'components/progress';
+@import 'components/separators';
+@import 'components/spinners';
+@import 'components/symbols';
+@import 'components/tables';
+@import 'components/tags';
+
+//  Helpers
+@import 'helpers/backgrounds';
+@import 'helpers/borders';
+@import 'helpers/fonts';
+@import 'helpers/hovers';
+@import 'helpers/loadings';
+@import 'helpers/shadows';
+@import 'helpers/texts';
+
+//  Utilities
+@import 'utilities/alignments';
+@import 'utilities/displays';
+@import 'utilities/flex-layouts';
+@import 'utilities/justify-contents';
+@import 'utilities/positions';
+@import 'utilities/sizes';
+@import 'utilities/spacings';
+
+//  Vendors
+@import 'vendors/keenicons';
+@import 'vendors/prismjs';
+@import 'vendors/quilljs';
+@import 'vendors/select2';
+@import 'vendors/sweetalert';

@@ -1,0 +1,19 @@
+//
+// Alert
+//
+
+/* Alerts */
+.alert {
+    padding: 1rem;
+    border-radius: 0.475rem;
+    margin: 0;
+
+    //  Theme colors
+    @each $name, $value in $theme-light-colors {
+        &.alert-#{$name} {
+            background-color: var(--mcu-#{$name}-light);
+            border: 1px solid var(--mcu-#{$name});
+        }
+    }
+
+}

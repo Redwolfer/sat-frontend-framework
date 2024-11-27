@@ -1,0 +1,69 @@
+//
+//	Hovers
+//
+
+/* Hover elevations */
+@each $name, $value in $hover-elevations {
+	.btn {
+		&.hover-elevate-#{$name} {
+			transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, transform 0.3s ease;
+			&:hover {
+				transform: translateY($value);
+				transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, transform 0.3s ease;
+				will-change: transform;
+			}
+		}
+	}
+	.hover-elevate-#{$name} {
+		transition: $hover-transform;
+		&:hover {
+			transform: translateY($value);
+			transition: $hover-transform;
+			will-change: transform;
+		}
+	}
+}
+
+/* Hover rotations */
+@each $name, $value in $hover-rotations {
+	.btn {
+		&.hover-rotate-#{$name} {
+			transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, transform 0.3s ease;
+			&:hover {
+				transform: rotate($value);
+				transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, transform 0.3s ease;
+				will-change: transform;
+			}
+		}
+	}
+	.hover-rotate-#{$name} {
+		transition: $hover-transform;
+		&:hover {
+			transform: rotate($value);
+			transition: $hover-transform;
+			will-change: transform;
+		}
+	}
+}
+
+/* Hover scales */
+@each $name, $value in $hover-scales {
+	.btn {
+		&.hover-scale#{$name} {
+			transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, transform 0.3s ease;
+			&:hover {
+				transform: scale($value);
+				transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, transform 0.3s ease;
+				will-change: transform;
+			}
+		}
+	}
+	.hover-scale#{$name} {
+		transition: $hover-transform;
+		&:hover {
+			transform: scale($value);
+			transition: $hover-transform;
+			will-change: transform;
+		}
+	}
+}

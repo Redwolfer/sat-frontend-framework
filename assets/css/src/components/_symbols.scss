@@ -1,0 +1,42 @@
+//
+//  Symbols
+//
+
+/* Symbol images */
+.symbol-img {
+    background-color: var(--mcu-gray-100);
+    border-radius: 0.475rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @each $name, $value in $symbol-sizes {
+        &.symbol-img-#{$name} {
+            width: $value;
+            height: $value;
+            > img {
+                border-radius: 0.475rem;
+                width: $value;
+                height: $value;
+            }
+        }
+    }
+}
+
+/* Symbol labels */
+.symbol-label {
+    background-color: var(--mcu-gray-100);
+    border-radius: 0.475rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @each $name, $value in $symbol-sizes {
+        &.symbol-label-#{$name} {
+            min-width: $value;
+            width: $value;
+            max-width: $value;
+            min-height: $value;
+            height: $value;
+            max-height: $value;
+        }
+    }
+}

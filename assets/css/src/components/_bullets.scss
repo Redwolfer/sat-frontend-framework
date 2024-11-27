@@ -1,0 +1,31 @@
+//
+//  Bullets
+//
+
+// Base
+.bullet {
+    display: inline-block;
+    background-color: var(--mcu-gray-400);
+    border-radius: 6px;
+    width: 8px;
+    height: 4px;
+    flex-shrink: 0;
+
+    &.bullet-dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 100% !important;
+    }
+
+    &.bullet-vertical {
+        width: 4px;
+        height: 8px;
+    }
+
+    &.bullet-line {
+        width: 5px;
+        height: 1px;
+        border-radius: 0;
+    }
+
+}

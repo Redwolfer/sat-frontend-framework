@@ -1,0 +1,22 @@
+//
+//  HTML
+//
+
+/* Select */
+select {
+    word-wrap: normal !important;
+}
+
+/* Input */
+input:focus {
+    outline: none !important;
+}
+
+/* Label */
+label {
+    margin-bottom: 0 !important;
+}
+
+ol > [data-list="bullet"]:not(.ql-editor ol > [data-list="bullet"]) {
+    list-style-type: disc;
+}

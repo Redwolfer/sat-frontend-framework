@@ -1,0 +1,41 @@
+//
+// Backgrounds
+//
+
+/* Background colors */
+@each $name, $value in $theme-colors {
+    .bg-#{$name} {
+        background-color: var(--mcu-#{$name}) !important;
+    }
+}
+
+/* Subtle background colors */
+@each $name, $value in $theme-light-colors {
+    .bg-#{$name}-subtle {
+        background-color: var(--mcu-#{$name}-light) !important;
+    }
+}
+
+/* Gradient background colors */
+@each $name, $value in $theme-light-colors {
+    .bg-gradient-#{$name} {
+        background: linear-gradient(180deg, var(--mcu-#{$name}), var(--mcu-#{$name}-dark)) !important;
+    }
+}
+
+/* Theme gray colors */
+@each $name, $value in $grays {
+    .bg-gray-#{$name} {
+        background-color: var(--mcu-gray-#{$name}) !important;
+    }
+}
+
+/* White background */
+.bg-white {
+    background-color: var(--mcu-white) !important;
+}
+
+/* Black background */
+.bg-black {
+    background-color: var(--mcu-black) !important;
+}

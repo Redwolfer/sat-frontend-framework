@@ -1,0 +1,61 @@
+//
+//  Tags
+//
+
+/* Tags */
+.tag {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9em;
+    padding: .3em .75em;
+    border-radius: 0.6rem;
+    line-height: 1.4;
+
+    &.tag-sm {
+        font-size: .75em;
+    }
+
+    &.tag-lg {
+        font-size: 1.05em;
+    }
+
+    &.tag-rounded {
+        border-radius: 1em;
+        padding: .3em .75em;
+    }
+
+    &.tag-squared {
+        border-radius: 0;
+    }
+
+    // Theme colors
+    @each $name, $value in $theme-colors {
+        &.tag-#{$name} {
+            color: var(--mcu-white);
+            background-color: var(--mcu-#{$name});
+
+            &.tag-outline {
+                border: 1px solid var(--mcu-#{$name});
+                color: var(--mcu-#{$name});
+                background-color: transparent;
+
+                &.tag-outline-dashed {
+                    border-style: dashed;
+                }
+
+                &.tag-outline-dotted {
+                    border-style: dotted;
+                }
+            }
+        }
+    }
+
+    //  Theme light colors
+    @each $name, $value in $theme-light-colors {
+        &.tag-#{$name}-subtle {
+            color: var(--mcu-#{$name});
+            background-color: var(--mcu-#{$name}-light);
+        }
+    }
+
+}

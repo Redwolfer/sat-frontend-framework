@@ -1,0 +1,50 @@
+//
+// Card
+//
+
+/* Cards */
+.card {
+    border-radius: .75rem;
+    background-color: var(--mcu-white);
+
+    &.card-bordered {
+        border: 1px solid var(--mcu-gray-200);
+    }
+
+    .card-header {
+        padding: 2.25rem;
+        border-bottom: 1px solid var(--mcu-gray-200);
+
+        &.card-header-flush {
+            border-bottom: none;
+        }
+
+        .card-title {
+            font-size: 22px;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+    .card-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+        padding: 1rem 2.25rem;
+        border-bottom: 1px solid var(--mcu-gray-200);
+    }
+
+    .card-body {
+        padding: 2.25rem 2.25rem !important;
+    }
+
+    .card-footer {
+        padding: 2.25rem;
+        border-top: 1px solid var(--mcu-gray-200);
+
+        &.card-footer-flush {
+            border-top: none;
+        }
+    }
+
+}

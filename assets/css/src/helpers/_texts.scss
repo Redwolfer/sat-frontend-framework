@@ -1,0 +1,61 @@
+//
+//  Texts
+//
+
+/* Text colors */
+@each $name, $value in $theme-colors {
+    .text-#{$name} {
+        color: var(--mcu-#{$name});
+    }
+    .text-hover-#{$name}:hover {
+        color: var(--mcu-#{$name});
+        transition: 0.3s;
+    }
+}
+
+/* Text gray colors */
+@each $name, $value in $grays {
+    .text-gray-#{$name} {
+        color: var(--mcu-gray-#{$name});
+    }
+    .text-hover-gray-#{$name}:hover {
+        color: var(--mcu-gray-#{$name});
+        transition: 0.3s;
+    }
+}
+
+/* Text aligns */
+@each $name, $value in $text-aligns {
+    .text-#{$name} {
+        text-align: $value !important;
+    }
+}
+
+/* Text decorations */
+@each $name, $value in $text-decorations {
+    .text-decoration-#{$name} {
+        text-decoration: $value !important;
+    }
+}
+
+/* Text transforms */
+@each $name, $value in $text-transforms {
+    .text-#{$name} {
+        text-transform: $value !important;
+    }
+}
+
+/* Other text styles */
+
+.text-wrap {
+    white-space: normal !important;
+}
+
+.text-nowrap {
+    white-space: nowrap !important;
+}
+
+.text-break {
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+}

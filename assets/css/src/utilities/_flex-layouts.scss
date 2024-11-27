@@ -1,0 +1,78 @@
+//
+//  Flex layout
+//
+
+/* Flexes */
+@each $name, $value in $flexes {
+  @if $name == "row-fluid" {
+    .flex-#{$name} {
+      flex: $value;
+      min-width: 0;
+    }
+  } @else {
+    .flex-#{$name} {
+      flex: $value;
+    }
+  }
+}
+
+/* Flex alignments */
+@each $name, $value in $flex-alignments {
+  @if $name == "stack" {
+    .flex-#{$name} {
+      justify-content: $value;
+      align-items: center;
+    }
+  } @else {
+    .flex-#{$name} {
+      justify-content: $value;
+      align-items: $value;
+    }
+  }
+}
+
+/* Flex directions */
+@each $name, $value in $flex-directions {
+  .flex-#{$name} {
+    flex-direction: $value !important;
+  }
+}
+
+/* Flex grows */
+@each $name, $value in $flex-grows {
+  .flex-grow-#{$name} {
+    flex-grow: $value !important;
+  }
+}
+
+/* Flex shrinks */
+@each $name, $value in $flex-shrinks {
+  .flex-shrink-#{$name} {
+    flex-shrink: $value !important;
+  }
+}
+
+/* Flex wraps */
+@each $name, $value in $flex-wraps {
+  .flex-#{$name} {
+    flex-wrap: $value !important;
+  }
+}
+
+/* Flex equal */
+.flex-equal {
+  flex-grow: 1;
+  flex-basis: 0;
+  flex-shrink: 0;
+}
+
+/* Flex fill */
+.flex-fill {
+  flex: 1 1 auto !important;
+}
+
+@media (min-width: 576px) {
+  .flex-sm-nowrap {
+      flex-wrap: nowrap !important;
+  }
+}

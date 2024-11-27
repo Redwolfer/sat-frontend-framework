@@ -1,0 +1,66 @@
+//
+//  Separator
+//
+
+/* Separators */
+.separator {
+    display: block;
+    height: 0;
+    border-bottom: 1px solid var(--mcu-gray-200);
+
+    &.separator-dotted {
+        border-bottom-style: dotted;
+        border-bottom-color: var(--mcu-gray-200);
+    }
+
+    &.separator-dashed {
+        border-bottom-style: dashed;
+        border-bottom-color: var(--mcu-gray-200);
+    }
+
+    &.separator-content {
+        display: flex;
+        align-items: center;
+        border-bottom: 0;
+        text-align: center;
+    }
+
+    &.separator-content::before, &.separator-content::after {
+        content: " ";
+        width: 50%;
+        border-bottom: 1px solid var(--mcu-gray-200);
+    }
+
+    &.separator-content::before {
+        margin-right: 1.25rem;
+    }
+
+    &.separator-content::after {
+        margin-left: 1.25rem;
+    }
+
+    &.separator-content.separator-dotted::before, &.separator-content.separator-dotted::after {
+        border-bottom-style: dotted;
+        border-bottom-color: var(--mcu-gray-500);
+    }
+
+    &.separator-content.separator-dashed::before, &.separator-content.separator-dashed::after {
+        border-bottom-style: dashed;
+        border-bottom-color: var(--mcu-gray-500);
+    }
+
+    // Theme colors
+    @each $name, $value in $theme-colors {
+        &.separator-content.border-#{$name}::before, &.separator-content.border-#{$name}::after {
+            border-color: var(--mcu-#{$name}) !important;
+        }
+    }
+
+    // Theme gray colors
+    @each $name, $value in $grays {
+        &.separator-content.border-gray-#{$name}::before, &.separator-content.border-gray-#{$name}::after {
+            border-color: var(--mcu-gray-#{$name}) !important;
+        }
+    }
+
+}

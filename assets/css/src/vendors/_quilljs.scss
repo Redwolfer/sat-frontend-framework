@@ -1,0 +1,17 @@
+//
+//  Quilljs
+//
+
+.ql-toolbar.ql-snow {
+    border-color: var(--mcu-gray-300);
+    border-radius: .75em .75em 0 0 !important;
+}
+
+.ql-container.ql-snow {
+    border-color: var(--mcu-gray-300);
+    border-radius: 0 0 .75em .75em !important;
+}
+
+.ql-editor.ql-blank::before {
+    line-height: 2;
+}

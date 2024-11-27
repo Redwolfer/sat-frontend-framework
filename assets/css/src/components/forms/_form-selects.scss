@@ -1,0 +1,58 @@
+//
+//  Form select
+//
+
+/* Form selects */
+.form-select {
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--mcu-gray-700);
+    appearance: none;
+    background-color: var(--mcu-white);
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 16px 12px;
+    border: 1px solid var(--mcu-gray-200);
+    border-radius: 0.675rem;
+    box-shadow: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &.form-select-solid {
+        background-color: var(--mcu-light);
+        border-color: var(--mcu-light);
+        color: var(--mcu-gray-800);
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    &.form-select-transparent {
+        background-color: transparent;
+        border-color: transparent;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        box-shadow: none;
+    }
+
+    &.form-select-flush {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: transparent;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+    }
+
+    &:focus-visible {
+        outline: 1px solid var(--mcu-gray-100);
+    }
+
+    &:disabled {
+        background-color: var(--mcu-gray-200);
+    }
+
+}

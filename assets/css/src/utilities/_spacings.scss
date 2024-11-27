@@ -1,0 +1,389 @@
+//
+//  Spacings
+//
+
+/* Margins */
+@each $name, $value in $spacings {
+    .m-#{$name} {
+        margin: $value !important;
+    }
+}
+
+/* Margin starts */
+@each $name, $value in $spacings {
+    .ms-#{$name} {
+        margin-left: $value !important;
+    }
+}
+
+/* Margin ends */
+@each $name, $value in $spacings {
+    .me-#{$name} {
+        margin-right: $value !important;
+    }
+}
+
+/* Margin tops */
+@each $name, $value in $spacings {
+    .mt-#{$name} {
+        margin-top: $value !important;
+    }
+}
+
+/* Margin bottoms */
+@each $name, $value in $spacings {
+    .mb-#{$name} {
+        margin-bottom: $value !important;
+    }
+}
+
+/* Margin horizontals */
+@each $name, $value in $spacings {
+    .mx-#{$name} {
+        margin-left: $value !important;
+        margin-right: $value !important;
+    }
+}
+
+/* Margin verticals */
+@each $name, $value in $spacings {
+    .my-#{$name} {
+        margin-top: $value !important;
+        margin-bottom: $value !important;
+    }
+}
+
+/* Margin negatives */
+@each $name, $value in $spacings {
+    .m-n#{$name} {
+        margin: -#{$value} !important;
+    }
+}
+
+/* Margin negative starts */
+@each $name, $value in $spacings {
+    .ms-n#{$name} {
+        margin-left: -#{$value} !important;
+    }
+}
+
+/* Margin negative ends */
+@each $name, $value in $spacings {
+    .me-n#{$name} {
+        margin-right: -#{$value} !important;
+    }
+}
+
+/* Margin negative tops */
+@each $name, $value in $spacings {
+    .mt-n#{$name} {
+        margin-top: -#{$value} !important;
+    }
+}
+
+/* Margin negative bottoms */
+@each $name, $value in $spacings {
+    .mb-n#{$name} {
+        margin-bottom: -#{$value} !important;
+    }
+}
+
+/* Margin negative horizontals */
+@each $name, $value in $spacings {
+    .mx-n#{$name} {
+        margin-left: -#{$value} !important;
+        margin-right: -#{$value} !important;
+    }
+}
+
+/* Margin negative verticals */
+@each $name, $value in $spacings {
+    .my-n#{$name} {
+        margin-top: -#{$value} !important;
+        margin-bottom: -#{$value} !important;
+    }
+}
+
+/* Paddings */
+@each $name, $value in $spacings {
+    .p-#{$name} {
+        padding: $value !important;
+    }
+}
+
+/* Padding starts */
+@each $name, $value in $spacings {
+    .ps-#{$name} {
+        padding-left: $value !important;
+    }
+}
+
+/* Padding tops */
+@each $name, $value in $spacings {
+    .pt-#{$name} {
+        padding-top: $value !important;
+    }
+}
+
+/* Padding bottoms */
+@each $name, $value in $spacings {
+    .pb-#{$name} {
+        padding-bottom: $value !important;
+    }
+}
+
+/* Padding ends */
+@each $name, $value in $spacings {
+    .pe-#{$name} {
+        padding-right: $value !important;
+    }
+}
+
+/* Padding horizontals */
+@each $name, $value in $spacings {
+    .px-#{$name} {
+        padding-left: $value !important;
+        padding-right: $value !important;
+    }
+}
+
+/* Padding verticals */
+@each $name, $value in $spacings {
+    .py-#{$name} {
+        padding-top: $value !important;
+        padding-bottom: $value !important;
+    }
+}
+
+/* Padding negatives */
+@each $name, $value in $spacings {
+    .p-n#{$name} {
+        padding: -#{$value} !important;
+    }
+}
+
+/* Padding negative starts */
+@each $name, $value in $spacings {
+    .ps-n#{$name} {
+        padding-left: -#{$value} !important;
+    }
+}
+
+/* Padding negative ends */
+@each $name, $value in $spacings {
+    .pe-n#{$name} {
+        padding-right: -#{$value} !important;
+    }
+}
+
+/* Padding negative tops */
+@each $name, $value in $spacings {
+    .pt-n#{$name} {
+        padding-top: -#{$value} !important;
+    }
+}
+
+/* Padding negative tops */
+@each $name, $value in $spacings {
+    .pb-n#{$name} {
+        padding-bottom: -#{$value} !important;
+    }
+}
+
+/* Padding negative horizontals */
+@each $name, $value in $spacings {
+    .px-n#{$name} {
+        padding-left: -#{$value} !important;
+        padding-right: -#{$value} !important;
+    }
+}
+
+/* Padding negative verticals */
+@each $name, $value in $spacings {
+    .py-n#{$name} {
+        padding-top: -#{$value} !important;
+        padding-bottom: -#{$value} !important;
+    }
+}
+
+@each $name-grid, $value-grid in $grid-breakpoints {
+    @media (min-width: $value-grid) {
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .m-#{$name-grid}-#{$name-spacings} {
+                margin: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .ms-#{$name-grid}-#{$name-spacings} {
+                margin-left: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .me-#{$name-grid}-#{$name-spacings} {
+                margin-right: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .mt-#{$name-grid}-#{$name-spacings} {
+                margin-top: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .mb-#{$name-grid}-#{$name-spacings} {
+                margin-bottom: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .mx-#{$name-grid}-#{$name-spacings} {
+                margin-left: $value-spacings !important;
+                margin-right: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .my-#{$name-grid}-#{$name-spacings} {
+                margin-top: $value-spacings !important;
+                margin-bottom: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .p-#{$name-grid}-#{$name-spacings} {
+                padding: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .ps-#{$name-grid}-#{$name-spacings} {
+                padding-left: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .pe-#{$name-grid}-#{$name-spacings} {
+                padding-right: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .pt-#{$name-grid}-#{$name-spacings} {
+                padding-top: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .pb-#{$name-grid}-#{$name-spacings} {
+                padding-bottom: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .px-#{$name-grid}-#{$name-spacings} {
+                padding-left: $value-spacings !important;
+                padding-right: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .py-#{$name-grid}-#{$name-spacings} {
+                padding-top: $value-spacings !important;
+                padding-bottom: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .m-#{$name-grid}-n#{$name-spacings} {
+                margin: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .ms-#{$name-grid}-n#{$name-spacings} {
+                margin-left: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .me-#{$name-grid}-n#{$name-spacings} {
+                margin-right: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .mt-#{$name-grid}-n#{$name-spacings} {
+                margin-top: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .mb-#{$name-grid}-n#{$name-spacings} {
+                margin-bottom: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .mx-#{$name-grid}-n#{$name-spacings} {
+                margin-left: $value-spacings !important;
+                margin-right: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .my-#{$name-grid}-n#{$name-spacings} {
+                margin-top: $value-spacings !important;
+                margin-bottom: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .p-#{$name-grid}-n#{$name-spacings} {
+                padding: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .ps-#{$name-grid}-n#{$name-spacings} {
+                padding-left: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .pe-#{$name-grid}-n#{$name-spacings} {
+                padding-right: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .pt-#{$name-grid}-n#{$name-spacings} {
+                padding-top: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .pb-#{$name-grid}-n#{$name-spacings} {
+                padding-bottom: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .px-#{$name-grid}-n#{$name-spacings} {
+                padding-left: $value-spacings !important;
+                padding-right: $value-spacings !important;
+            }
+        }
+
+        @each $name-spacings, $value-spacings in $spacings {
+            .py-#{$name-grid}-n#{$name-spacings} {
+                padding-top: $value-spacings !important;
+                padding-bottom: $value-spacings !important;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,29 @@
+//
+//  Forms
+//
+
+/* Form label */
+.form-label {
+    margin-bottom: .25em !important;
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--mcu-gray-800);
+}
+
+/* Required */
+.required {
+    &:after {
+        content: "*";
+        position: relative;
+        font-size: inherit;
+        color: var(--mcu-danger);
+        padding-left: 0.25rem;
+        font-weight: bold;
+    }
+}
+
+/* Validation message */
+.validation-message {
+    color: var(--mcu-danger) !important;
+    padding-top: 1em !important;
+}
