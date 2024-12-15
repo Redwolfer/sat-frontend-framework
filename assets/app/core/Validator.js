@@ -199,6 +199,21 @@ class Validator {
             this.#setErrorMessage(element, message !== '' ? message : 'Wajib diisi.');
             element.on('keyup change', () => this.#setErrorMessage(element));
             return false;
+        } else if (element.hasClass('select2-hidden-accessible')) {
+            const value = element.val();
+            if (value === null || value === '') {
+                this.errors++;
+                const customMessage = message !== '' ? message : 'Wajib dipilih.';
+                this.#setErrorMessage(element, customMessage);
+
+                // Attach change event to revalidate
+                element.on('change', () => {
+                    if (element.val() !== null && element.val() !== '') {
+                        this.#setErrorMessage(element);
+                    }
+                });
+                return false;
+            }
         } else if (element.is('input[type="radio"],input[type="checkbox"]') && element.filter(':checked').val() === undefined) {
             this.errors++;
             this.#setErrorMessage(element, message !== '' ? message : 'Wajib dipilih.');
@@ -1089,13 +1104,19 @@ class Validator {
      * // Automatically called by validation methods to display error messages.
      */
     #setErrorMessage(element, message = '') {
-        if (element.is('select')) {
+        if (element.hasClass('select2-hidden-accessible')) {
             element.closest(this.parentClass).find('.select2-selection').toggleClass('is-invalid', message !== '');
             message !== '' ? this.errorMessages.push({ element: element.attr('id'), message: message }) : false;
-        };
-        element.toggleClass('is-invalid', message !== '');
-        message !== '' ? this.errorMessages.push({ element: '#' + element.attr('id'), message: message }) : false;
-        element.closest(this.parentClass).find(this.messageClass).html(message);
+            element.closest(this.parentClass).find(this.messageClass).html(message);
+        } else if (element.is('select')) {
+            element.closest(this.parentClass).find('.select2-selection').toggleClass('is-invalid', message !== '');
+            message !== '' ? this.errorMessages.push({ element: element.attr('id'), message: message }) : false;
+        } else {
+            element.toggleClass('is-invalid', message !== '');
+            message !== '' ? this.errorMessages.push({ element: '#' + element.attr('id'), message: message }) : false;
+            element.closest(this.parentClass).find(this.messageClass).html(message);
+        }
     }
+
 
 }
